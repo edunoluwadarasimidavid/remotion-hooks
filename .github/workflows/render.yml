@@ -1,0 +1,29 @@
+name: Render Animations
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: actions/setup-node@main
+        with:
+          node-version: 18
+      - run: npm install
+      - run: mkdir -p out
+      - run: npx remotion render Animation1 out/animation1.mp4
+      - run: npx remotion render Animation2 out/animation2.mp4
+      - run: npx remotion render Animation3 out/animation3.mp4
+      - run: npx remotion render Animation4 out/animation4.mp4
+      - run: npx remotion render Animation5 out/animation5.mp4
+      - run: npx remotion render Animation6 out/animation6.mp4
+      - run: npx remotion render Animation7 out/animation7.mp4
+      - run: npx remotion render Animation8 out/animation8.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: animations
+          path: out/
