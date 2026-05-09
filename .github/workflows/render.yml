@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   render:
@@ -12,11 +13,13 @@ jobs:
       - uses: actions/checkout@main
       - uses: actions/setup-node@main
         with:
-          node-version: 18
+          node-version: 20
       - run: npm install
+      - run: npx remotion install
       - run: mkdir -p out
-      - run: npx remotion render ReactAndroidShort out/video.mp4
+      - run: npx remotion render InspectShort out/inspect-short.mp4 --codec=h264
       - uses: actions/upload-artifact@v4
         with:
-          name: animations
-          path: out/
+          name: inspect-short
+          path: out/inspect-short.mp4
+          retention-days: 7

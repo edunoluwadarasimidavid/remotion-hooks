@@ -1,12 +1,12 @@
 import { Composition } from "remotion";
-import { ReactAndroidShort } from "./Video";
+import { InspectShort } from "./InspectShort";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
-        id="ReactAndroidShort"
-        component={ReactAndroidShort}
+        id="InspectShort"
+        component={InspectShort}
         durationInFrames={1800}
         fps={30}
         width={1080}

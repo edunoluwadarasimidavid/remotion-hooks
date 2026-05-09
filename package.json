@@ -1,5 +1,5 @@
 {
-  "name": "react-android-short",
+  "name": "mises-inspect-short",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "remotion": "^4.0.228",
+    "@remotion/google-fonts": "^4.0.228",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
