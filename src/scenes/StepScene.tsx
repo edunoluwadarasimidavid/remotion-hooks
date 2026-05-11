@@ -491,7 +491,7 @@ const ConsoleScreen: React.FC<{ frame: number }> = ({ frame }) => (
     }}
   >
     {/* Console prompt */}
-    <div style={{ opacity: interpolate(frame, [10, 18], [0, 1], { extrapolateRight: "clamp" } }) }>
+    <div style={{ opacity: interpolate(frame, [10, 18], [0, 1], { extrapolateRight: "clamp" }) }}>
       <span style={{ color: "#555", fontSize: 13, fontFamily: "'JetBrains Mono', monospace" }}>
         {`>`}{" "}
       </span>
@@ -511,7 +511,7 @@ const ConsoleScreen: React.FC<{ frame: number }> = ({ frame }) => (
       </span>
     </div>
     {/* More console output */}
-    <div style={{ marginTop: 8, opacity: interpolate(frame, [38, 48], [0, 1], { extrapolateRight: "clamp" } }) }>
+    <div style={{ marginTop: 8, opacity: interpolate(frame, [38, 48], [0, 1], { extrapolateRight: "clamp" }) }}>
       <span style={{ color: "#555", fontSize: 13, fontFamily: "'JetBrains Mono', monospace" }}>
         {`>`}{" "}
       </span>
